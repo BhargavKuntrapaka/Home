@@ -1,0 +1,29 @@
+<p style="font-size:  x-large;">pleae enter your name: </p>
+<br>
+
+<!-- <mat-form-field class="example-form-field">
+  <mat-label>Clearable input</mat-label>
+  <input matInput type="text" [(ngModel)]="value" [formControl]="name">
+  <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field> -->
+<div class="center">
+
+
+  <div class="row" style="height: 300px;">
+    <input class="center" id="name" type="text" [formControl]="name">
+  </div>
+
+
+  <div class="row">
+    <div class="center">
+      <button type="submit" (click)="continueAction(name.value)">Skip & Continue</button>
+    
+      <button type="submit" (click)="continueAction(name.value)" style="margin-left: 10px;">Continue</button>
+    </div>
+
+
+    {{ name.value }}
+  </div>
+</div>
