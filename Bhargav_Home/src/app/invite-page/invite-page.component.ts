@@ -1,3 +1,4 @@
+import { HomeService } from './../services/home.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvitePageComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private service: HomeService) { }
+  name: any = '';
   ngOnInit(): void {
+    this.name = this.service.getName();
   }
 
 }
